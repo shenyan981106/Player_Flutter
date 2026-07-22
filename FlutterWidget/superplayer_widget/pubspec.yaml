@@ -15,7 +15,10 @@ dependencies:
   flutter_easyloading: 3.0.5
 
   super_player:
-    path: E:/PubCache/git/Player_Flutter-40949902aa6e96eca639a1fde59d63e77e6654b8/Flutter
+    git:
+      url: https://github.com/LiteAVSDK/Player_Flutter
+      path: Flutter
+      ref: main
 
 dependency_overrides:
   # force override flutter_easyloading dep
