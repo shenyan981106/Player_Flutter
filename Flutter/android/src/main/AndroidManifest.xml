@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <activity
+                android:name="com.tencent.vod.flutter.ui.FlutterPipImplActivity"
+                android:theme="@style/FTXPlayerPipTheme"
+                android:supportsPictureInPicture="true"
+                android:screenOrientation="portrait"
+                android:excludeFromRecents="true"
+                android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout"
+                android:exported="false"
+                android:launchMode="singleTop"
+                android:resizeableActivity="true"
+                android:windowSoftInputMode="stateHidden"
+                tools:ignore="UnusedAttribute" >
+            <intent-filter>
+                <action android:name="com.tencent.flutter.startPip"/>
+                <action android:name="com.tencent.flutter.exitPip"/>
+                <action android:name="com.tencent.flutter.updatePip"/>
+                <action android:name="com.tencent.flutter.doExitPip"/>
+            </intent-filter>
+        </activity>
+        
+        <service android:name="com.tencent.vod.flutter.ui.TXAndroid12BridgeService"/>
+    </application>
+
+</manifest>
